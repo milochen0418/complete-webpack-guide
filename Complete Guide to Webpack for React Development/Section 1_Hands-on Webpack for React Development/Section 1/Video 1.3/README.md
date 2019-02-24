@@ -24,3 +24,10 @@ $ npm install webpack  --save-dev
 ## First time to use webpack to build bundle.js in ./dist
 $ ./node_modules/.bin/webpack
 Do you want to install 'webpack-cli' (yes/no): yes
+
+## Install http-server to run front-end web page
+$ npm install --save-dev http-server  
+
+## fixed the bug of index.html to change bundle.js to dist/bundle.js for index.html
+$ vim index.html
+
