@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node:clean": "rm -rf ./ndoe_modules && rm -f ./package-lock.json",
+    "node:install": "npm install",
+    "node:reboot": "npm run node:clean && npm run node:install ",
+    "web:clean": "rm -rf ./dist",
+    "web:build": "webpack",
+    "web:exec": "http-server",
+    "web:reboot": "npm run web:clean && npm run web:build && npm run web:exec",
+    "reboot": "npm run node:reboot && npm run web:reboot",
+    "help": "cat ./package.json | jq '.scripts'"
   },
   "author": "",
   "license": "ISC",
