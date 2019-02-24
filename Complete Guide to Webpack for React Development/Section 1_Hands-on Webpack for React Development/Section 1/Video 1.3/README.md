@@ -18,7 +18,9 @@ When you do npm install, all libraries will download into node_modules
 ### dist
 When you do webpack command to build bundle.js, all result will show in ./dist folder   
 
-
-
 ## Install webpack  
 $ npm install webpack  --save-dev  
+
+## First time to use webpack to build bundle.js in ./dist
+$ ./node_modules/.bin/webpack
+Do you want to install 'webpack-cli' (yes/no): yes
