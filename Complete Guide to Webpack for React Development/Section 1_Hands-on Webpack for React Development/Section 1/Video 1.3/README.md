@@ -9,6 +9,16 @@ $ vim .gitignore
 $ cat .gitignore  
 package-lock.json  
 node_modules  
-dist  
+dist   
 
-## npm install webpack --save-dev
+### package-lock.json 
+When you use npm install to install package, the package-lock.json will save information about where you download and lock it's version    
+### node_modules
+When you do npm install, all libraries will download into node_modules   
+### dist
+When you do webpack command to build bundle.js, all result will show in ./dist folder   
+
+
+
+## Install webpack  
+$ npm install webpack  --save-dev  
