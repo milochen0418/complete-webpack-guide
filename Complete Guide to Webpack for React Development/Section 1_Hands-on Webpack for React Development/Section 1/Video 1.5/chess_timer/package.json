@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node_modules\\.bin\\webpack -p",
+    "web:build": "webpack -p",
+    "web:clean": "rm -rf ./www/builds",
+    "web:exec": "cd www && live-server && cd -",
+    "web:reboot": "npm run web:clean && npm run web:build && npm run web:exec",
+    "reboot": "rm -rf ./node_modules && rm -f package-lock.json && npm install && npm run web:reboot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rohan Ameida",
@@ -16,6 +20,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.9",
     "file-loader": "^1.1.6",
+    "live-server": "^1.2.1",
     "node-sass": "^4.7.2",
     "path": "^0.12.7",
     "sass-loader": "^6.0.6",
