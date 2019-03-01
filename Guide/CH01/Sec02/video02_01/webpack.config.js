@@ -14,7 +14,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.txt$/,
-                loader: 'my-loader',
+                loader: './my-loader',
                 include: path.resolve(__dirname, 'src'),
             },
         ],

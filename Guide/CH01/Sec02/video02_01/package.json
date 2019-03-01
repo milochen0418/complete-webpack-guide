@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "web:build": "webpack -p",
+    "web:build": "webpack -d",
     "web:clean": "rm -rf ./www/builds",
     "web:exec": "cd www && live-server && cd -",
     "web:reboot": "npm run web:clean && npm run web:build && npm run web:exec",
