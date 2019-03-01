@@ -1,5 +1,5 @@
 {
-  "name": "chess_timer",
+  "name": "customized-loader",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "clean": "rm -rf ./node_modules &&  rm -f package-lock.json && npm run web:clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Rohan Ameida",
+  "author": "Milo Chen",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
