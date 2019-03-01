@@ -13,21 +13,8 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.jsx?$/,
-                loader: 'babel-loader',
-                include: path.resolve(__dirname, 'src'),
-                options: {
-                    presets: ["env", "react"],
-                }
-            },
-            {
-                test: /\.png$/,
-                loader: 'url-loader',
-                include: path.resolve(__dirname, 'src'),
-            },
-            {
-                test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader'],
+                test: /\.txt$/,
+                loader: 'my-loader',
                 include: path.resolve(__dirname, 'src'),
             },
         ],
