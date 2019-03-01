@@ -6,6 +6,12 @@
   "scripts": {
     "start": "node_modules\\.bin\\webpack-dev-server --content-base www",
     "build": "node_modules\\.bin\\webpack -d",
+    "web:exec": "cd www && live-server && cd -",
+    "web:build": "webpack -d",
+    "web:clean": "rm -rf ./www/builds",
+    "web:reboot": "npm run web:clean && npm run web:build && npm run web:exec",
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm run web:clean",
+    "reboot": "npm run clean && npm install && npm run web:reboot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rohan Ameida & Milo Chen",
@@ -16,6 +22,7 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.9",
     "file-loader": "^1.1.6",
+    "live-server": "^1.2.1",
     "node-sass": "^4.7.2",
     "path": "^0.12.7",
     "sass-loader": "^6.0.6",
