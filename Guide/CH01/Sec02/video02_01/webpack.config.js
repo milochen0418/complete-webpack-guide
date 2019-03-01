@@ -10,11 +10,19 @@ module.exports = {
         publicPath: "/builds/",
     },
 
+
+  resolveLoader: {
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'loaders')
+    ]
+  },
+
     module: {
         loaders: [
             {
                 test: /\.txt$/,
-                loader: './my-loader',
+                loader: 'my-loader',
                 include: path.resolve(__dirname, 'src'),
             },
         ],
