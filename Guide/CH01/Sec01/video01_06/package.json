@@ -9,6 +9,7 @@
     "web:exec": "cd www && live-server && cd -",
     "web:reboot": "npm run web:clean && npm run web:build && npm run web:exec",
     "reboot": "rm -rf ./node_modules && rm -f package-lock.json && npm install && npm run web:reboot",
+    "clean":"rm -rf ./node_modules &&  rm -f package-lock.json && npm run web:clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rohan Ameida",
